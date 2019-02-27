@@ -1,3 +1,6 @@
+## Euler Method for solving first order differential equations ##
+## Returns approximation of y(interval_end) ##
+
 import math
 
 ## equation in form of f(t,y)
@@ -9,14 +12,13 @@ init_y = 1
 interval_end = 2
 step_size = 0.1
 
-
-def Euler(equation, t, y, interval_end, step_size):
+def Euler(f, t, y, h, interval_end):
     while(round(t,10) < interval_end):
         f = eval(equation)
-        y = y + step_size * f
-        t = t + step_size
+        y = y + h * f
+        t = t + h
     return y
 
 if __name__ == '__main__':
-    approx = Euler(equation, init_t, init_y, interval_end, step_size)
+    approx = Euler(equation, init_t, init_y, step_size, interval_end)
     print(approx)

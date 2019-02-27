@@ -1,6 +1,9 @@
+## Runge Kutta Method (RK4) for solving first order differential equations ##
+## Returns approximation of y(interval_end) ##
+
 import math
 
-## equation in form of f(t,y)
+## Equation in form of f(t,y)
 ## EX: y-t**2+1 , math.cos(t)+2*y , 2-math.exp(-4*t)-2*y
 
 equation = 'y-t**2+1'
